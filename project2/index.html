@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> SV MultiShop - Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+
+    <!-- Left: Logo -->
+    <div class="nav-left">
+        <h2>SV MultiShop</h2>
+    </div>
+
+    <!-- Center: Search Bar -->
+    <div class="nav-center">
+        <input type="text" placeholder="Search for products...">
+    </div>
+
+    <!-- Right: Menu -->
+    <div class="nav-right">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="orders.html">My Orders</a>
+        <!-- Location Dropdown -->
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Location ▾</a>
+        <div class="dropdown-content">
+             <a href="#" onclick="selectLocation('New Delhi')">New Delhi</a>
+        <a href="#" onclick="selectLocation('Mumbai')">Mumbai</a>
+        <a href="#" onclick="selectLocation('Chennai')">Chennai</a>
+        <a href="#" onclick="selectLocation('Bengaluru')">Bengaluru</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Language Dropdown -->
+     <div class="dropdown">
+        <a href="#" class="dropbtn">Language ▾</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="selectLanguage('Tamil')">Tamil</a>
+        <a href="#" onclick="selectLanguage('English')">English</a>
+        <a href="#" onclick="selectLanguage('Hindi')">Hindi</a>
+        <a href="#" onclick="selectLanguage('Telugu')">Telugu</a>
+        </div>
+    </div>
+    </div>
+
+</header>
+<!-- Navigation -->
+<nav class="category-nav">
+    <a href=food.html>Food</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="stationery.html">Stationery</a>
+    <a href="kitchen items.html">Kids toys</a>
+    <a href="kid.html">Kitchen</a>
+    <a href="grocery.html">Grocery</a>
+</nav>
+<!-- Offers Section -->
+<section class="offers">
+
+    <h2>🔥 Today’s Special Offers</h2>
+
+    <div class="offer-container">
+
+        <div class="offer-card">
+            <img src="C:\Users\saroj\Downloads\images\briyani.jpg" alt="Food Offer">
+            <h3>Food Offer</h3>
+            <p>Flat 30% OFF on first order</p>
+            <button onclick="addToCart('Briyani',199)">Add to Cart</button>
+        </div>
+
+        <div class="offer-card">
+            <img src="C:\Users\saroj\Downloads\images\beauty\sunscreen" alt="Sun Scream">
+            <h3>sun Scream</h3>
+            <p>Up to 50% OFF on clothes</p>
+            <button onclick="addToCart('Sun Scream',199)">Add to Cart</button>
+        </div>
+
+        <div class="offer-card">
+            <img src="C:\Users\saroj\Downloads\images\eye linner.png" alt="Beauty Products">
+            <h3>Beauty Deal</h3>
+            <p>Buy 1 Get 1 Free</p>
+            <button onclick="addToCart('Beauty Products',199)">Add to Cart</button>
+
+        </div>
+
+        <div class="offer-card">
+            <img src="C:\Users\saroj\Downloads\images\grocery" alt="Grocery Offer">
+            <h3>Grocery Discount</h3>
+            <p>Save ₹200 on orders above ₹1000</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Terms & Policy Section -->
+<section class="policy">
+
+    <div class="policy-container">
+
+        <div class="policy-box">
+            <h3>Terms & Conditions</h3>
+            <p>
+                By using this website, users agree to follow all rules and regulations.
+                Products and prices may change without prior notice.
+            </p>
+        </div>
+
+        <div class="policy-box">
+            <h3>Privacy Policy</h3>
+            <p>
+                User information is kept confidential.
+                We do not share personal data with third parties.
+            </p>
+        </div>
+
+        <div class="policy-box">
+            <h3>Return Policy</h3>
+            <p>
+                Products can be returned within 7 days of delivery.
+                Items should be unused and in original condition.
+            </p>
+        </div>
+
+        <div class="policy-box">
+            <h3>Help & Support</h3>
+            <p>
+                For any queries, contact our support team via email or phone.
+                We are available 24/7 to assist customers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+    <p>© 2026 SV MultiShop | College Mini Project</p>
+</footer>
+<script>
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+}
+
+function selectLocation(city) {
+    localStorage.setItem("selectedLocation", city);
+    document.getElementById("locationBtn").innerText = city + " ▾";
+}
+window.onload = function () {
+    const savedLocation = localStorage.getItem("selectedLocation");
+    if (savedLocation) {
+        document.getElementById("locationBtn").innerText = savedLocation + " ▾";
+    }
+};
+
+function selectLanguage(lang) {
+    localStorage.setItem("selectedLanguage", lang);
+    document.getElementById("languageBtn").innerText = lang + " ▾";
+}
+window.onload = function () {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+        document.getElementById("languageBtn").innerText = savedLanguage + " ▾";
+    }
+};
+</script>
+</body>

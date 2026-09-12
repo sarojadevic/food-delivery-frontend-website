@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SV Beauty - MultiShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+    <div class="nav-left">
+        <h2> SV MultiShop</h2>
+    </div>
+
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="beauty.html" class="active">Beauty</a>
+        <a href="stationery.html">Stationery</a>
+        <a href="kitchen items.html">Kitchen</a>
+        <a href="kid.html">Kids toys</a>
+        <a href="grocery.html">Grocery</a>
+    </div>
+</header>
+
+<!-- ================= CATEGORY NAV ================= -->
+<nav class="category-nav">
+    <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="stationery.html">Stationery</a>
+        <a href="kitchen items.html">Kitchen</a>
+        <a href="kid.html">Kids Toys</a>
+        <a href="grocery.html">Grocery</a>
+    
+</nav>
+
+<!-- FOOD OFFERS (HORIZONTAL ROW) -->
+<div class="food-offers-row">
+    <div class="food-card">
+        <img src= "C:\Users\saroj\Downloads\images\beauty\sunscreen" alt="Sun Scream">
+        <h3>Sun Scream</h3>
+        <p>₹199</p>
+        <span class="badge">30% OFF</span>
+         <button onclick="addToCart('sun Scream',199)">Add to Cart</button>
+         <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="sun Scream" data-price="199">
+    
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\eye linner.png"  alt="eye liner">
+        <h3>liner</h3>
+        <p>₹250</p>
+        <span class="badge">Buy 1 Get 1</span>
+         <button onclick="addToCart('Burger',199)">Add to Cart</button>
+
+         <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Burger" data-price="349">
+        
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+</div>
+
+<!-- ================= BEAUTY PRODUCTS ================= -->
+<div class="food-container">
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\lipstick.jpg" alt="Lipstick">
+        <h3>Lipstick</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Lipstick',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Lipstick" data-price="299">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\sunscreen" alt="sun scream">
+        <h3>sun scream</h3>
+        <p>₹199</p>
+         <button onclick="addToCart('sun scream',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="sun scream" data-price="199">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\mustrizer.webp" alt="Musterizer">
+        <h3>Musterizer</h3>
+        <p>₹349</p>
+         <button onclick="addToCart('Musterizer',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Musterizer" data-price="349">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src= "C:\Users\saroj\Downloads\images\beauty\perfume"alt="Perfume">
+        <h3>Perfume</h3>
+        <p>₹599</p>
+         <button onclick="addToCart('Perfume',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Perfume" data-price="599">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\pouch" alt="Makeup Pouch">
+        <h3>Makeup Pouch</h3>
+        <p>₹800</p>
+         <button onclick="addToCart('Makeup Pouch',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Makeup Pouch" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\lotion" alt="Lotion">
+        <h3>Lotion</h3>
+        <p>₹600</p>
+         <button onclick="addToCart('Lotion',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Lotion" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\makeuo kit.jpeg"alt="Makeup Kit">
+        <h3>Makeup Kit</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Makeup kit',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Makeup Kit" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\foundation" alt="Foundation">
+        <h3>Foundation</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Foundation',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Foundation" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\palette" alt="Palett">
+        <h3>Palett</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Palett',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Palett" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\shadow" alt="Eye Shadow">
+        <h3>Eye Shadow</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Eye Shadow',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Eye Shadow" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\blash" alt="Blash">
+        <h3>Blash</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Blash',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Blash" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\maskara" alt="Mascara">
+        <h3>Mascara</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Mascara',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Mascara" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\liner" alt="Eye liner">
+        <h3>Eye liner</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Eye liner',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Eye liner" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\toner" alt="Toner">
+        <h3>Toner</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Toner',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Toner" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+    <div class="food-card">
+        <img src="C:\Users\saroj\Downloads\images\beauty\mirror" alt="Mirror">
+        <h3>Mirror</h3>
+        <p>₹249</p>
+         <button onclick="addToCart('Mirror',199)">Add to Cart</button>
+
+        <div class="order-controls">
+            <input type="checkbox" class="select-item"
+                   data-name="Mirror" data-price="249">
+            <input type="number" class="qty" min="1" value="1">
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= ORDER BUTTON ================= -->
+<div style="text-align:center; margin:30px">
+    <button class="order-btn" onclick="placeOrder()">Order Selected Items</button>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+}
+
+function placeOrder() {
+    const selectedItems = document.querySelectorAll(".select-item:checked");
+
+    if (selectedItems.length === 0) {
+        alert("Please select at least one item");
+        return;
+    }
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    selectedItems.forEach(item => {
+        const card = item.closest(".food-card");
+        const qty = card.querySelector(".qty").value;
+
+        orders.push({
+            name: item.dataset.name,
+            price: item.dataset.price,
+            quantity: qty,
+            date: new Date().toLocaleString()
+        });
+    });
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert("✅ Order placed successfully!\nThank you for shopping with MultiShop 😊");
+    window.location.href = "orders.html";
+}
+</script>
+
+
+</body>
+</html>

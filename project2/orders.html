@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+<header class="topbar">
+
+    <!-- Left: Logo -->
+    <div class="nav-left">
+        <h2>SV MultiShop</h2>
+    </div>
+
+    <!-- Right: Menu -->
+    <div class="nav-right">
+         <a href="index.html">Home</a>
+        <a href="#">Services</a>
+        <a href="orders.html">My Orders</a>
+        <!-- Location Dropdown -->
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Location ▾</a>
+        <div class="dropdown-content">
+            <a href="#">New Delhi</a>
+            <a href="#">Mumbai</a>
+            <a href="#">Chennai</a>
+            <a href="#">Bengaluru</a>
+        </div>
+    </div>
+
+    <!-- Language Dropdown -->
+     <div class="dropdown">
+        <a href="#" class="dropbtn">Language ▾</a>
+        <div class="dropdown-content">
+            <a href="#">English</a>
+            <a href="#">Hindi</a>
+            <a href="#">Tamil</a>
+            <a href="#">Telugu</a>
+        </div>
+    </div>
+    </div>
+
+</header>
+<!-- Navigation -->
+<nav class="category-nav">
+    <a href=food.html>Food</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="stationery.html">Stationery</a>
+    <a href="kitchen items.html">Kids toys</a>
+    <a href="kid.html">Kitchen</a>
+    <a href="grocery.html">Grocery</a>
+</nav>
+<div class="order-card">
+<h2 style="text-align:center;">My Orders</h2>
+<div id="orderList"></div>
+</div>
+<footer class="footer">
+    <p>© 2026 MultiShop | College Mini Project</p>
+</footer>
+
+<script>
+const orders = JSON.parse(localStorage.getItem("orders"));
+const list = document.getElementById("orderList");
+
+if (!orders || orders.length === 0) {
+    list.innerHTML = "<p style='text-align:center;'>No orders yet</p>";
+} else {
+    orders.forEach(order => {
+        list.innerHTML += `
+            <div class="order-box">
+                <h3>${order.name}</h3>
+                <p>Price: ₹${order.price}</p>
+                <p>Quantity: ${order.quantity}</p>
+                <p><small>${order.date}</small></p>
+            </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>

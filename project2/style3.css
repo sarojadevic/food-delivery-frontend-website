@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Top Header */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#ff6f00;
+    padding: 15px 30px;
+}
+
+/* Left (Logo) */
+.nav-left h2 {
+    color: white;
+    margin: 0;
+}
+
+/* Center (Search) */
+.nav-center {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-center input {
+    width: 60%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Nav Right Flex */
+.nav-right {
+    display: flex;           /* keep children in one row */
+    align-items: center;     /* vertically centered */
+    gap: 15px;               /* spacing between items */
+}
+
+/* Normal links (Home, Services) */
+.nav-right > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;   /* important to stay inline */
+}
+
+/* Dropdown button */
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 28px;           /* below the button */
+    background-color: white;
+    min-width: 140px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Navigation */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color:#ff6f00;
+}
+
+/* Offers Section */
+.offers {
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+.offers h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Offer Cards Layout */
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background-color: white;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+
+    /* 🔹 BORDER LINE */
+    border: 2px solid #ff6f00;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Images */
+.offer-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Text */
+.offer-card h3 {
+    color: #ff6f00;
+    margin: 10px 0 5px;
+}
+
+.offer-card p {
+    padding-bottom: 15px;
+}
+
+/* Hover Effect */
+.offer-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Policy Section */
+.policy {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+/* Layout */
+.policy-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Policy Boxes */
+.policy-box {
+    width: 220px;
+}
+
+.policy-box h3 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+}
+
+.policy-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* ================= CATEGORY NAVIGATION ================= */
+
+.category-nav {
+    display: flex;
+    justify-content: center;     /* center navigation */
+    gap: 25px;                   /* space between items */
+    background-color: #333;
+    padding: 12px 0;
+}
+
+/* Navigation links */
+.category-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;         /* pill shape */
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.category-nav a:hover {
+    background-color: #ff6f00;
+    color: white;
+}
+
+/* Active page highlight */
+.category-nav a.active {
+    background-color: #ff6f00;
+}
+
+
+.order-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px auto;
+    width: 320px;
+    border-radius: 8px;
+    background-color: #fff;
+    background-image: url("images\or-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.order-card{
+    background-color:#fafafa;
+    background-image: url("C:\Users\saroj\Downloads\images\kitchen\tawa")
+}
+
+
+
